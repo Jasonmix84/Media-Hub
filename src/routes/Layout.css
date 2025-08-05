@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #1565c0; /* Blue */
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Add this to give space below the navbar */
+body, #root, .App, .main-content {
+    margin-top: 64px; /* Adjust if needed based on navbar height */
+}
+
+.navbar h3 {
+    color: white;
+    margin-right: 32px;
+    font-weight: bold;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    margin-right: 24px;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.15);
+}
