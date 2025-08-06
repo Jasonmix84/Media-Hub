@@ -41,7 +41,7 @@ const Create = () => {
 
         await supabase
             .from('posts')
-            .insert({title: post.title, description: post.description, imageURL: post.imageURL, upvotes: 0, tags: post.tags, creatorID: userID})
+            .insert({title: post.title, description: post.description, imageURL: post.imageURL, upvotes: 0, tags: post.tags, creatorID: userID, comments: null})
             .select()
         window.location = "/"
     }
