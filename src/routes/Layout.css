@@ -10,11 +10,6 @@
     z-index: 1000;
 }
 
-/* Add this to give space below the navbar */
-body, #root, .App, .main-content {
-    margin-top: 64px; /* Adjust if needed based on navbar height */
-}
-
 .navbar h3 {
     color: white;
     margin-right: 32px;
@@ -33,4 +28,10 @@ body, #root, .App, .main-content {
 
 .nav-btn:hover {
     background: rgba(255,255,255,0.15);
+}
+
+.main-content {
+  padding-top: 80px; /* Space for the fixed navbar */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in the total width */
 }

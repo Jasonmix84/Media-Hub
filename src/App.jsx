@@ -51,17 +51,14 @@ function App() {
   return (
     <>
       <div className="App">
-        {!loading && authenticated &&
-          <div>
-            <button onClick={signOut}>Sign Out</button>
-            <Link
-              style={{ color: "White" }}
-              to={'/Create'}
-            >
+        {!loading && authenticated && (
+          <div className="app-header">
+            <button className="sign-out-btn" onClick={signOut}>Sign Out</button>
+            <Link to={'/Create'} className="create-post-btn">
               Create A Post!
             </Link>
           </div>
-        }
+        )}
 
         {/* Search Bar */}
         <div className="search-container">
@@ -74,39 +71,44 @@ function App() {
           />
         </div>
 
-        {posts && posts.length > 0 ?
+        {posts && posts.length > 0 ? (
           <div className="loaded-page">
             <div className="sort-options">
               <h4>Order by:</h4>
-              {/* Add onClick handlers to the buttons */}
               <button onClick={sortByNewest}>Newest</button>
               <button onClick={sortByPopularity}>Most Popular</button>
             </div>
 
             <div className="Posts">
-              {posts.filter((post) => {
-                if (searchTerm === "") {
-                  return post;
-                } else if (post.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-                  return post;
-                }
-                return null;
-              }).map((post, index) =>
-                <Post
-                  key={post.id}
-                  id={post.id}
-                  title={post.title}
-                  created_at={post.created_at}
-                  upvotes={post.upvotes}
-                />
-              )}
+              {posts
+                .filter((post) => {
+                  if (searchTerm === "") {
+                    return post;
+                  } else if (
+                    post.title
+                      .toLowerCase()
+                      .includes(searchTerm.toLowerCase())
+                  ) {
+                    return post;
+                  }
+                  return null;
+                })
+                .map((post) => (
+                  <Post
+                    key={post.id}
+                    id={post.id}
+                    title={post.title}
+                    created_at={post.created_at}
+                    upvotes={post.upvotes}
+                  />
+                ))}
             </div>
           </div>
-          :
+        ) : (
           <div>
             <h2>{'No Posts Created Yet 😞'}</h2>
           </div>
-        }
+        )}
       </div>
     </>
   );

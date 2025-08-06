@@ -1,0 +1,109 @@
+.Create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #242424;
+  color: #f4f4f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.Create h1 {
+  color: #1565c0;
+  margin-bottom: 2rem;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.178);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #f4f4f9
+}
+
+
+.create-form input[type="text"],
+.create-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Important for padding and width */
+}
+
+.create-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.create-form input[type="text"]:focus,
+.create-form textarea:focus {
+    border-color: #1565c0;
+    outline: none;
+    box-shadow: 0 0 5px rgba(21, 101, 192, 0.5);
+}
+
+
+.tags-container {
+    margin-bottom: 1.5rem;
+}
+
+.tags-container h3 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.tag-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.tag-option input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+}
+
+.tag-option label {
+    font-size: 1rem;
+    color: #f4f4f9;
+    cursor: pointer;
+}
+
+
+.create-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.create-form button[type="submit"]:hover {
+  background-color: #45a049;
+}

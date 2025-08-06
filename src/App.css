@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */ /* Removed to allow full width */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -39,4 +39,31 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sign-out-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.create-post-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.sort-options {
+  text-align: left;
+  margin-bottom: 1rem;
 }
